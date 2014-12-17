@@ -39,7 +39,13 @@ class Mission
 		"caweapons_baf",
 		"CAWheeled2_V3S",
 		"CAWheeled2_MTVR",
-		"CAWheeled2_Kamaz"
+		"CAWheeled2_Kamaz",
+		"ace_sys_aitalk",
+		"ace_sys_wounds",
+		"ace_sys_viewblock",
+		"ace_sys_vehicledamage",
+		"ace_sys_repair",
+		"ace_main"
 	};
 	addOnsAuto[]=
 	{
@@ -48,8 +54,12 @@ class Mission
 		"cacharacters_pmc",
 		"CACharacters_BAF",
 		"cacharacters2",
-		"ca_missions_battlefieldclearance",
-		"ca_missions_alternativeinjurysimulation",
+		"ace_sys_aitalk",
+		"ace_sys_wounds",
+		"ace_sys_viewblock",
+		"ace_sys_vehicledamage",
+		"ace_sys_repair",
+		"ace_main",
 		"CATracked_E",
 		"CATracked",
 		"caair_e_mi8",
@@ -92,7 +102,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=328;
+		items=334;
 		class Item0
 		{
 			side="WEST";
@@ -143,7 +153,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={-104.31281,639.46027,70.817383};
+					position[]={-95.660057,641.34308,79.747589};
 					id=2;
 					side="LOGIC";
 					vehicle="Logic";
@@ -161,7 +171,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={-72.121429,642.1806,70.101074};
+					position[]={-82.126198,642.83179,81.194977};
 					id=3;
 					side="LOGIC";
 					vehicle="FunctionsManager";
@@ -16002,44 +16012,6 @@ class Mission
 		};
 		class Item324
 		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={-70.18454,635.1048,47.893524};
-					azimut=0.32468101;
-					id=1139;
-					side="LOGIC";
-					vehicle="BattleFieldClearance";
-					leader=1;
-					skill=0.5;
-					init="this synchronizeObjectsAdd playableUnits";
-				};
-			};
-		};
-		class Item325
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={-106.70829,633.72485,50.766846};
-					azimut=0.32468101;
-					id=1140;
-					side="LOGIC";
-					vehicle="AlternativeInjurySimulation";
-					leader=1;
-					skill=0.5;
-					init="this synchronizeObjectsAdd playableUnits";
-				};
-			};
-		};
-		class Item326
-		{
 			side="CIV";
 			class Vehicles
 			{
@@ -16048,7 +16020,7 @@ class Mission
 				{
 					position[]={365.14804,475.41672,867.92078};
 					azimut=-1.0788;
-					id=1141;
+					id=1139;
 					side="CIV";
 					vehicle="Haris_Press_EP1";
 					player="PLAY CDG";
@@ -16057,11 +16029,11 @@ class Mission
 					skill=0.60000002;
 					init="this addAction [""Start Camera"",""camera.sqs"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
 					description="Mission Observer (Journalist)";
-					synchronizations[]={1141};
+					synchronizations[]={1139};
 				};
 			};
 		};
-		class Item327
+		class Item325
 		{
 			side="CIV";
 			class Vehicles
@@ -16071,7 +16043,7 @@ class Mission
 				{
 					position[]={369.06528,474.08881,867.78546};
 					azimut=-1.0788;
-					id=1142;
+					id=1140;
 					side="CIV";
 					vehicle="Citizen3_EP1";
 					player="PLAY CDG";
@@ -16080,7 +16052,151 @@ class Mission
 					skill=0.60000002;
 					init="this addAction [""Start Camera"",""camera.sqs"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
 					description="Mission Observer (Civilian)";
-					synchronizations[]={1142};
+					synchronizations[]={1140};
+				};
+			};
+		};
+		class Item326
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={-102.01076,636.92786,57.897949};
+					id=1142;
+					side="LOGIC";
+					vehicle="ACE_AITalk_Logic";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item327
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={-83.35321,634.48706,46.833801};
+					id=1148;
+					side="LOGIC";
+					vehicle="ACE_Wounds_FullHeal";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item328
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={-94.16732,633.96057,47.249603};
+					id=1147;
+					side="LOGIC";
+					vehicle="ACE_Wounds_EveryoneMedic";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item329
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={-112.01366,635.48029,58.1604};
+					id=1141;
+					side="LOGIC";
+					vehicle="ACE_Viewblock_EnableAIGrassVB_Mod";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item330
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={-93.060791,638.12787,58.424377};
+					id=1143;
+					side="LOGIC";
+					vehicle="ACE_Vehicledamage_Enable_Cookoff";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item331
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={-83.452728,638.16119,56.581116};
+					id=1144;
+					side="LOGIC";
+					vehicle="ace_sys_repair_tyres";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item332
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={-74.107903,638.41968,56.449127};
+					id=1145;
+					side="LOGIC";
+					vehicle="ACE_Required_Logic";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item333
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={-63.052044,638.39832,56.581116};
+					id=1146;
+					side="LOGIC";
+					vehicle="ACE_Wounds_Logic";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
 				};
 			};
 		};
@@ -17858,26 +17974,6 @@ class Mission
 			skill=0.60000002;
 			text="INS_TR3";
 			init="nul = [""v_tr"",this] call f_fnc_assignGear;";
-		};
-	};
-	class Markers
-	{
-		items=2;
-		class Item0
-		{
-			position[]={418.26794,527.66675,-197.25009};
-			name="mkrInsertion";
-			text="Insert";
-			type="mil_start";
-			angle=0.32468101;
-		};
-		class Item1
-		{
-			position[]={409.59714,522.8811,-345.81937};
-			name="mkrExtraction";
-			text="Extract";
-			type="mil_end";
-			angle=0.32468101;
 		};
 	};
 };
