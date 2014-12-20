@@ -1,4 +1,10 @@
 // ====================================================================================
+//Attempt to connect ACRE
+["162.248.88.211", "9987", "", "ACRE_CHANNEL", "123"] call acre_api_fnc_joinServer;
+
+
+
+// ====================================================================================
 
 // F2 - Process ParamsArray
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)

@@ -494,7 +494,7 @@ class Mission
 					azimut=1.4615099;
 					id=19;
 					side="WEST";
-					vehicle="US_Soldier_EP1";
+					vehicle="US_Soldier_AAR_EP1";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitUS_A1_AAR";
@@ -3519,7 +3519,7 @@ class Mission
 					azimut=1.4615099;
 					id=218;
 					side="WEST";
-					vehicle="US_Soldier_EP1";
+					vehicle="US_Soldier_AAR_EP1";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitUS_A2_AAR";
@@ -3645,7 +3645,7 @@ class Mission
 					azimut=1.4615099;
 					id=223;
 					side="WEST";
-					vehicle="US_Soldier_EP1";
+					vehicle="US_Soldier_AAR_EP1";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitUS_B1_AAR";
@@ -3701,7 +3701,7 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={636.02441,585.18243,25.486237};
+					position[]={635.9942,585.18213,25.432068};
 					azimut=1.4615099;
 					id=224;
 					side="WEST";
@@ -3734,7 +3734,7 @@ class Mission
 					azimut=1.4615099;
 					id=226;
 					side="WEST";
-					vehicle="US_Soldier_EP1";
+					vehicle="US_Soldier_AAR_EP1";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitUS_B2_AAR";
@@ -3860,7 +3860,7 @@ class Mission
 					azimut=1.4615099;
 					id=231;
 					side="WEST";
-					vehicle="US_Soldier_EP1";
+					vehicle="US_Soldier_AAR_EP1";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitUS_C1_AAR";
@@ -3949,7 +3949,7 @@ class Mission
 					azimut=1.4615099;
 					id=234;
 					side="WEST";
-					vehicle="US_Soldier_EP1";
+					vehicle="US_Soldier_AAR_EP1";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitUS_C2_AAR";
@@ -17932,6 +17932,24 @@ class Mission
 			skill=0.60000002;
 			text="INS_TR3";
 			init="nul = [""v_tr"",this] call f_fnc_assignGear;";
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={-89.103439,641.11011,69.132233};
+			a=0;
+			b=0;
+			activationBy="LOGIC";
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="time > 1.5;";
+			expActiv="{[_x select 0, ""MAG"", ""ACE_Bandage"", 10] call ACE_fnc_RemoveGear;    [_x select 0, ""MAG"", ""ACE_LargeBandage"", 10] call ACE_fnc_RemoveGear;    [_x select 0, ""MAG"", ""ACE_Epinephrine"", 10] call ACE_fnc_RemoveGear;    [_x select 0, ""MAG"", ""ACE_Morphine"", 10] call ACE_fnc_RemoveGear;    [_x select 0, ""MAG"", ""ACE_Medkit"", 4] call ACE_fnc_RemoveGear;    [_x select 0, ""MAG"", ""ACE_Tourniquet"", 4] call ACE_fnc_RemoveGear;} forEach allPlayableUnits;";
+			class Effects
+			{
+			};
 		};
 	};
 };
